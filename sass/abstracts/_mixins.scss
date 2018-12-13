@@ -2,6 +2,13 @@
     &::after {
         content: "";
         display: table;
-        clear: both; 
+        clear: both;
     }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
 }
