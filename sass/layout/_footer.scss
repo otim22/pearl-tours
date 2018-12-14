@@ -2,10 +2,27 @@
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
+    color: $color-grey-light-1;
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
 
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
+
+        @include respond(phone) {
+            margin-bottom: 4rem;
+        }
     }
 
     &__logo {
@@ -17,6 +34,16 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -27,7 +54,7 @@
         display: inline-block;
 
         &:not(:last-child) {
-            margin-right: 1.5rem;
+            margin-right: .5rem;
         }
     }
 
@@ -35,7 +62,7 @@
         &:link,
         &:visited {
             color: $color-grey-light-1;
-            color: $color-grey-light-1;
+            background-color: $color-grey-dark-3;
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;
@@ -53,7 +80,17 @@
     &__copyright {
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
-        width: 70%;
+        width: 80%;
         float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            float: none;
+        }
     }
 }

@@ -12,9 +12,14 @@
         background-color: rgba($color-white, .5);
         border: none;
         border-bottom: 3px solid transparent;
-        width: 90%;
+        width: 68%;
         display: block;
         transition: all .3s;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
 
         &:focus {
             outline: none;
@@ -48,8 +53,13 @@
     }
 
     &__radio-group {
-        width: 49%;
+        width: 35%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-input {
